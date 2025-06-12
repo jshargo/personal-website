@@ -11,9 +11,8 @@ const TerminalLoader = ({ onComplete }: TerminalLoaderProps) => {
 
   const lines = [
     'Initializing connection...',
-    'Authenticating user...',
-    'Loading profile data...',
-    'Access granted.',
+    'Authenticating user...',,
+    'Routing...',
   ];
 
   useEffect(() => {

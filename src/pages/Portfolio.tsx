@@ -1,8 +1,13 @@
 
+import { Link } from 'react-router-dom';
+
 const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background text-foreground pt-16 px-8 pb-8">
       <div className="max-w-4xl mx-auto">
+        <Link to="/" className="text-foreground hover:text-muted-foreground underline mb-8 inline-block">
+          ← Back
+        </Link>
         <h1 className="text-4xl font-bold mb-12 text-center">Portfolio</h1>
 
         <div className="mb-16">
@@ -68,6 +73,12 @@ const Portfolio = () => {
             Finally, after 9 months of work, Strike Network was officially released to the public. LinkedIn posts were made, marketing videos were published, waitlist participants were notified, and every single family-member was called to give our platform a shot. And honestly, launch day went a lot better than we expected. The website didn't crash, we didn't get hacked, and people had positive words to say, which I consider an absolute win. That launch was almost 4 months ago, and I've learned so much since then. With over 350 athletes and 60 businesses currently active on Strike, we have been able to gather invaluable feedback which we will leverage to make our website the biggest NIL platform in the world. With a mobile app coming soon, and lots of new features on the horizon, we won't stop until every college athlete has a deal, and every business can find generational talent, all in one place. We are building the future, the future is <a href="https://strikentwrk.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 underline font-semibold">strikentwrk.com</a>
             </p>
           </div>
+        </div>
+        
+        <div className="text-center mt-16">
+          <Link to="/" className="text-foreground hover:text-muted-foreground underline">
+            Home
+          </Link>
         </div>
       </div>
     </div>

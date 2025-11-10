@@ -1,6 +1,8 @@
 
-import { Github, Linkedin, FileText, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, FileText, ArrowDown, Briefcase } from 'lucide-react';
 import SocialLink from '@/components/SocialLink';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -28,7 +30,7 @@ const Index = () => {
           <hr className="my-6 border-muted-foreground/50" />
 
           <p className="text-foreground">
-            You can checkout my other links here <ArrowDown className="inline-block w-5 h-5 ml-1 animate-bounce text-foreground" /> 
+            You can check out my other links here <ArrowDown className="inline-block w-5 h-5 ml-1 animate-bounce text-foreground" /> 
           </p>
         </div>
 
@@ -56,6 +58,13 @@ const Index = () => {
             href="/resume.pdf"
             icon={<FileText className="w-6 h-6" />}
             delay="delay-3"
+          />
+          <SocialLink
+            title="Portfolio"
+            description="A collection of my work and projects"
+            href="/portfolio"
+            icon={<Briefcase className="w-6 h-6" />}
+            delay="delay-4"
           />
         </div>
 

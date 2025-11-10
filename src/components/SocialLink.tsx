@@ -11,10 +11,11 @@ interface SocialLinkProps {
 }
 
 const SocialLink = ({ title, description, href, icon, delay = '' }: SocialLinkProps) => {
-  const isInternal = href.startsWith('/');
+  // Check if it's an internal React route (starts with / but not a file extension)
+  const isInternalRoute = href.startsWith('/') && !href.includes('.');
 
-  const Component = isInternal ? Link : 'a';
-  const props = isInternal 
+  const Component = isInternalRoute ? Link : 'a';
+  const props = isInternalRoute 
     ? { to: href } 
     : { href, target: "_blank", rel: "noopener noreferrer" };
 

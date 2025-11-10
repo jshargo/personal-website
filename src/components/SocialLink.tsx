@@ -1,5 +1,6 @@
 
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface SocialLinkProps {
   title: string;
@@ -10,11 +11,16 @@ interface SocialLinkProps {
 }
 
 const SocialLink = ({ title, description, href, icon, delay = '' }: SocialLinkProps) => {
+  const isInternal = href.startsWith('/');
+
+  const Component = isInternal ? Link : 'a';
+  const props = isInternal 
+    ? { to: href } 
+    : { href, target: "_blank", rel: "noopener noreferrer" };
+
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Component
+      {...props}
       className={`group block p-6 bg-card border border-border rounded-lg hover:bg-accent transition-all duration-300 hover:border-foreground opacity-0 fade-in-up ${delay}`}
     >
       <div className="flex items-center justify-between">
@@ -33,7 +39,7 @@ const SocialLink = ({ title, description, href, icon, delay = '' }: SocialLinkPr
         </div>
         <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-300" />
       </div>
-    </a>
+    </Component>
   );
 };
 

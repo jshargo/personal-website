@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, FileText, ArrowDown, HandshakeIcon, Bot } from 'lucide-react';
+import { Github, Linkedin, FileText, ArrowDown, Briefcase } from 'lucide-react';
 import SocialLink from '@/components/SocialLink';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -60,17 +60,10 @@ const Index = () => {
             delay="delay-3"
           />
           <SocialLink
-            title="Dietitian Chatbot Research Project"
-            description="A framework for building RAG chatbots for healthcare"
-            href="/dietbot"
-            icon={<Bot className="w-6 h-6" />}
-            delay="delay-4"
-          />
-           <SocialLink
-            title="Strike Network"
-            description="Building the future of NIL"
-            href="/strike"
-            icon={<HandshakeIcon className="w-6 h-6" />}
+            title="Portfolio"
+            description="Deep dives on flagship projects"
+            href="/portfolio"
+            icon={<Briefcase className="w-6 h-6" />}
             delay="delay-4"
           />
         </div>

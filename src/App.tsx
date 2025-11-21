@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Dietbot from "./pages/Dietbot";
 import Strike from "./pages/Strike";
+import Portfolio from "./pages/Portfolio";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/dietbot" element={<Dietbot />} />
           <Route path="/strike" element={<Strike />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

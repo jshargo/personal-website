@@ -5,10 +5,15 @@ const Dietbot = () => {
   return (
     <div className="min-h-screen bg-background text-foreground pt-16 px-8 pb-8">
       <div className="max-w-4xl mx-auto">
-        <Link to="/" className="text-foreground hover:text-muted-foreground underline mb-8 inline-block">
+        <Link to="/portfolio" className="text-foreground hover:text-muted-foreground underline mb-8 inline-block">
           ← Back
         </Link>
-        <h1 className="text-4xl font-bold mb-6 pb-4 text-center border-b">Dietitian Chatbot Research Project</h1>
+        <div className="mb-6 pb-4 text-center border-b">
+          <h1 className="text-4xl font-bold">Dietitian Chatbot Research Project</h1>
+          <p className="mt-2 text-xs text-muted-foreground italic">
+            J. Shargo, C. Ortiz and N. Tomuro, "Enhancing Dynamic Personalization in Dietitian Agents with RAG and Medical Dialogue Fine-Tuning," 2025 IEEE International Conference on eScience (eScience), Chicago, IL, USA, 2025, pp. 359-360, doi: 10.1109/eScience65000.2025.00070.
+          </p>
+        </div>
 
         <div className="mt-8">
           <h3 className="text-2xl font-semibold mb-4 text-foreground">The Problem with Nutrition Access</h3>
